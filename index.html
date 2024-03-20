@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Scheme Generator</title>
+  <script src="./main.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body id="body">
+  <header class="header-section" id="header-section">
+    <form class="selection-form" id="form-section">
+      <input type="color" class="color-input" id="color-input">
+      <select name="color-scheme" id="color-scheme" class="color-scheme">
+        <option value="monochrome">Monochrome</option>
+        <option value="monochrome-dark">Monochrome-dark</option>
+        <option value="monochrome-light">Monochrome-light</option>
+        <option value="analogic">Analogic</option>
+        <option value="complement">Complement</option>
+        <option value="analogic-complement">Analogic-complement</option>
+        <option value="triad">Triad</option>
+        <option value="quad">Quad</option>
+      </select>
+      <button class="form-btn">Get color scheme </button>
+    </form>
+    <button class="theme-btn" id="theme-btn">
+      <i class="fa-regular fa-sun fa-2xl" id="theme-logo"></i>
+    </button>
+  </header>
+  <main>
+    <div class="scheme-container" id="scheme-container"></div>
+  </main>
+</body>
+</html>
