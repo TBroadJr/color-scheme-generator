@@ -1,12 +1,8 @@
 const baseURL = "https://www.thecolorapi.com";
 const logoIcon = document.getElementById("theme-logo");
-const body = document.getElementById("body")
+const body = document.getElementById("body");
+const form = document.getElementById("form-section");
 let isLightMode = true;
-
-document.addEventListener("submit", (event) => {
-  event.preventDefault();
-  makeRequest();
-})
 
 document.addEventListener("click", (event) => {
   const schemeDataSet = event.target.dataset.scheme;
@@ -16,6 +12,8 @@ document.addEventListener("click", (event) => {
 })
 
 document.getElementById("theme-btn").addEventListener("click", toggleTheme)
+
+form.addEventListener("input", makeRequest)
 
 function toggleTheme() {
   isLightMode = !isLightMode
@@ -62,7 +60,7 @@ function renderSchemeHTML(hexArray) {
   const schemeContainer = document.getElementById("scheme-container");  
   const hexDisplayHTML = hexArray.map( item => {
     return `
-    <div>
+    <div class="scheme-container-item">
       <div data-scheme="${item}" class="color-div" style="background-color:${item}"></div>
       <p class="scheme-text">${item}</p>
     </div>
